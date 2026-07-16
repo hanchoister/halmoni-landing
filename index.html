@@ -8,6 +8,7 @@
       name="description"
       content="Halmoni helps siblings coordinate care for an aging parent — medications, appointments, and hand-offs in one place. Built for the sandwich generation."
     />
+    <meta name="theme-color" content="#fefcf8" />
     <meta property="og:title" content="Halmoni — Share the load of caring for a parent" />
     <meta
       property="og:description"
@@ -19,79 +20,133 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <nav class="nav">
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="nav">
       <div class="nav-inner container">
-        <a class="logo" href="#top">
-          <span class="logo-emoji" aria-hidden="true">👵</span>
+        <a class="logo" href="#top" aria-label="Halmoni home">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" fill="#7a9b8a" />
+              <path
+                d="M10 20c1.5-3 3.5-4 6-4s4.5 1 6 4"
+                stroke="#fefcf8"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                fill="none"
+              />
+              <circle cx="12.5" cy="13" r="1.4" fill="#fefcf8" />
+              <circle cx="19.5" cy="13" r="1.4" fill="#fefcf8" />
+            </svg>
+          </span>
           <span class="logo-word">Halmoni</span>
         </a>
-        <div class="nav-links">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#how">How it works</a>
           <a href="#demo">Live demo</a>
           <a href="#features">Features</a>
-          <a href="#waitlist" class="nav-cta">Join the waitlist</a>
-        </div>
+          <a href="#faq">FAQ</a>
+          <a href="#waitlist" class="nav-cta">
+            Get early access
+            <span aria-hidden="true">→</span>
+          </a>
+        </nav>
       </div>
-    </nav>
+    </header>
 
     <main id="top">
-      <section class="hero">
+      <!-- ===== HERO ===== -->
+      <section class="hero" data-reveal>
+        <div class="hero-glow" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">할머니 · Halmoni · grandmother in Korean</span>
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              Private beta · iOS
+            </div>
             <h1 class="hero-title">
-              Share the load.<br />
-              Care for your parent — <span class="accent">together</span>.
+              Care for your parent — <em>together</em>, <br class="desktop-only" />
+              not <span class="strike">alone</span>.
             </h1>
             <p class="hero-sub">
-              Halmoni keeps siblings in sync on medications, appointments, and daily care —
+              Halmoni keeps siblings in sync on medications, appointments, and hand-offs —
               so nothing falls through the cracks, and no one carries it alone.
             </p>
             <div class="hero-ctas">
-              <a href="#demo" class="btn btn-primary">Try the live demo</a>
-              <a href="#waitlist" class="btn btn-ghost">Join the waitlist →</a>
+              <a href="#demo" class="btn btn-primary">
+                Try the live demo
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#waitlist" class="btn btn-ghost">Join the waitlist</a>
             </div>
-            <p class="hero-fineprint">
-              Free to try. No signup for the demo. Nothing you tap is saved.
-            </p>
+            <div class="hero-trust">
+              <div class="hero-avatars" aria-hidden="true">
+                <span style="background: #d28a66">S</span>
+                <span style="background: #7a9b8a">M</span>
+                <span style="background: #f0d670; color: #4a4a4a">P</span>
+              </div>
+              <p class="hero-trust-text">
+                Built with three families of the <strong>sandwich generation</strong>.
+                <br />
+                Free during beta.
+              </p>
+            </div>
           </div>
 
           <div class="hero-visual">
-            <div class="phone-frame phone-frame-hero" aria-hidden="true">
-              <div class="phone-notch"></div>
-              <div class="phone-screen phone-screen-preview">
-                <div class="preview-inner">
-                  <div class="preview-label">HEADS UP</div>
-                  <div class="preview-card preview-card-warm">
-                    <div class="preview-emoji">💬</div>
-                    <div>
-                      <div class="preview-title">Hand-off from Priya</div>
-                      <div class="preview-body">
-                        Mom's dizzy spells are back — worse in the afternoons.
+            <div class="phone-cluster">
+              <div class="phone-frame phone-frame-hero" aria-hidden="true">
+                <div class="phone-notch"></div>
+                <div class="phone-screen phone-screen-preview">
+                  <div class="preview-inner">
+                    <div class="preview-header">
+                      <div>
+                        <div class="preview-hello">Good morning, Sofia</div>
+                        <div class="preview-caring">Caring for Elena · Day 412</div>
+                      </div>
+                      <div class="preview-avatar" style="background: #d28a66">S</div>
+                    </div>
+                    <div class="preview-label">HEADS UP</div>
+                    <div class="preview-card preview-card-warm">
+                      <div class="preview-emoji">💬</div>
+                      <div class="preview-card-body">
+                        <div class="preview-title">Hand-off from Priya</div>
+                        <div class="preview-body">
+                          Mom's dizzy spells are back — worse in the afternoons.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="preview-card preview-card-warm">
+                      <div class="preview-emoji">💊</div>
+                      <div class="preview-card-body">
+                        <div class="preview-title">Lisinopril runs out in 5 days</div>
+                        <div class="preview-body">Refill at the pharmacy or delivered.</div>
+                      </div>
+                    </div>
+                    <div class="preview-card preview-card-detective">
+                      <div class="preview-emoji">✨</div>
+                      <div class="preview-card-body">
+                        <div class="preview-title">Could Donepezil be the cause?</div>
+                        <div class="preview-body">
+                          4 symptoms logged since starting it 12 days ago.
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="preview-card preview-card-warm">
-                    <div class="preview-emoji">🔄</div>
-                    <div>
-                      <div class="preview-title">Lisinopril runs out in 5 days</div>
-                      <div class="preview-body">Refill at the pharmacy or have it delivered.</div>
-                    </div>
-                  </div>
-                  <div class="preview-card preview-card-warm">
-                    <div class="preview-emoji">✨</div>
-                    <div>
-                      <div class="preview-title">Could Donepezil be the cause?</div>
-                      <div class="preview-body">
-                        4 symptoms logged since starting it 12 days ago.
-                      </div>
-                    </div>
-                  </div>
+                </div>
+              </div>
+
+              <div class="floating-toast" aria-hidden="true">
+                <div class="floating-toast-dot"></div>
+                <div>
+                  <div class="floating-toast-title">Marcus gave Mom her 8am meds</div>
+                  <div class="floating-toast-time">just now</div>
                 </div>
               </div>
             </div>
@@ -99,152 +154,359 @@
         </div>
       </section>
 
-      <section class="social">
+      <!-- ===== TRUST BAR / STATS ===== -->
+      <section class="stats" data-reveal>
         <div class="container">
-          <p class="social-text">
-            <strong>50 million</strong> Americans care for an aging parent.
-            <br class="mobile-only" />
-            <span class="social-dim">Most coordinate over group text and spreadsheets. Halmoni replaces both.</span>
-          </p>
+          <div class="stats-eyebrow">할머니 · <em>Halmoni</em> · grandmother, in Korean</div>
+          <div class="stats-grid">
+            <div class="stat">
+              <div class="stat-num">50M</div>
+              <div class="stat-label">Americans caring for<br />an aging parent</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">24hr</div>
+              <div class="stat-label">average time siblings<br />waste per week on coordination</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">1 in 3</div>
+              <div class="stat-label">missed doses go<br />unnoticed for 48+ hours</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">$0</div>
+              <div class="stat-label">during private beta —<br />no ads, no data resale</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="demo" class="demo">
+      <!-- ===== PROBLEM ===== -->
+      <section class="problem" data-reveal>
+        <div class="container">
+          <div class="problem-inner">
+            <span class="eyebrow eyebrow-terracotta">The invisible work</span>
+            <h2 class="problem-title">
+              Group texts. Spreadsheets. A shoebox of pill bottles. <br />
+              <em>There has to be a better way.</em>
+            </h2>
+            <div class="problem-grid">
+              <div class="problem-card">
+                <div class="problem-emoji">📱</div>
+                <p>
+                  <strong>The group chat is chaos.</strong> Nobody knows if Mom took her
+                  morning meds. Was that dose from Tuesday, or Wednesday?
+                </p>
+              </div>
+              <div class="problem-card">
+                <div class="problem-emoji">🩺</div>
+                <p>
+                  <strong>The doctor asks a question</strong> — and no one in the family
+                  can answer. When did the dizziness start? What's she on again?
+                </p>
+              </div>
+              <div class="problem-card">
+                <div class="problem-emoji">🌙</div>
+                <p>
+                  <strong>One sibling is drowning.</strong> The others want to help but
+                  don't know how. Guilt on all sides. No one carries it well.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== HOW IT WORKS ===== -->
+      <section id="how" class="how" data-reveal>
         <div class="container">
           <div class="section-header">
-            <span class="eyebrow">Try it now</span>
-            <h2>The whole app, running live in your browser.</h2>
+            <span class="eyebrow">How Halmoni works</span>
+            <h2>Three tools. One shared brain for your family.</h2>
             <p class="section-sub">
-              You're viewing the Reyes family — Sofia, Marcus, and Priya coordinating care
-              for their mom Elena. Tap anywhere. Nothing is saved.
+              Set it up in an evening. Everyone stays in sync from the next morning on.
+            </p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">01</div>
+              <h3>Invite your siblings</h3>
+              <p>
+                Send one link. They join in 30 seconds — no accounts, no passwords, no
+                training required.
+              </p>
+            </div>
+            <div class="step-connector" aria-hidden="true"></div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <h3>Log the daily stuff, once</h3>
+              <p>
+                Meds, doses, symptoms, appointments. Whoever's on-duty logs it. Everyone
+                else sees it — no group text needed.
+              </p>
+            </div>
+            <div class="step-connector" aria-hidden="true"></div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <h3>Hand off cleanly</h3>
+              <p>
+                Going out of town? Hand duty to a sibling with a note. They accept, and
+                the mental load moves with them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DEMO ===== -->
+      <section id="demo" class="demo" data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Try it now — no signup</span>
+            <h2>The whole app, live in your browser.</h2>
+            <p class="section-sub">
+              You're viewing the Reyes family — Sofia, Marcus, and Priya coordinating
+              care for their mom Elena. Tap anywhere. Nothing you do is saved.
             </p>
           </div>
 
           <div class="demo-frame">
-            <div class="phone-frame phone-frame-demo">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <iframe
-                  src="/demo/"
-                  title="Halmoni live demo"
-                  loading="lazy"
-                  allow="autoplay"
-                ></iframe>
+            <div class="demo-phone-wrap">
+              <div class="phone-frame phone-frame-demo">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <iframe
+                    src="/demo/"
+                    title="Halmoni live demo"
+                    loading="lazy"
+                    allow="autoplay"
+                  ></iframe>
+                </div>
               </div>
             </div>
             <div class="demo-tips">
-              <h3>What to try:</h3>
-              <ul>
+              <h3>Take the tour</h3>
+              <ol>
                 <li>
-                  <strong>Today tab</strong> — the "Heads Up" card tells you what needs your
-                  attention right now.
+                  <span class="tip-num">1</span>
+                  <div>
+                    <strong>Today tab</strong> — the Heads-Up card surfaces what needs
+                    attention right now.
+                  </div>
                 </li>
                 <li>
-                  <strong>Family tab</strong> — see the sibling thread. Every message is
-                  tagged with who wrote it.
+                  <span class="tip-num">2</span>
+                  <div>
+                    <strong>Family tab</strong> — the sibling thread. Every message is
+                    tagged with who wrote it.
+                  </div>
                 </li>
                 <li>
-                  <strong>Timeline tab</strong> — filter by doses, symptoms, or visits. The
-                  full story of how mom's doing.
+                  <span class="tip-num">3</span>
+                  <div>
+                    <strong>Timeline tab</strong> — filter by doses, symptoms, visits.
+                    The whole story of how Mom's doing.
+                  </div>
                 </li>
                 <li>
-                  <strong>Meds tab → Lisinopril</strong> — see how refills, dose history, and
-                  side-effect detection come together.
+                  <span class="tip-num">4</span>
+                  <div>
+                    <strong>Meds → Lisinopril</strong> — see how refills, dose history,
+                    and side-effect detection come together.
+                  </div>
                 </li>
                 <li>
-                  <strong>Profile → Export Care Kit</strong> — the one-tap PDF you'd hand
-                  to a doctor or ER nurse.
+                  <span class="tip-num">5</span>
+                  <div>
+                    <strong>Profile → Export Care Kit</strong> — the one-tap PDF you'd
+                    hand a doctor or ER nurse.
+                  </div>
                 </li>
-              </ul>
+              </ol>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="features" class="features">
+      <!-- ===== FEATURES ===== -->
+      <section id="features" class="features" data-reveal>
         <div class="container">
           <div class="section-header">
             <span class="eyebrow">Features</span>
-            <h2>Everything caregiving siblings need — nothing they don't.</h2>
+            <h2>Everything caregiving siblings need. Nothing they don't.</h2>
           </div>
 
           <div class="feature-grid">
-            <article class="feature-card">
-              <div class="feature-emoji">💊</div>
+            <article class="feature-card feature-card-lg">
+              <div class="feature-icon feature-icon-sage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 3l3.5 3.5L15.5 3M12 6.5V13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 18h6"/></svg>
+              </div>
               <h3>Medications, without the chaos</h3>
               <p>
-                Track every med, every dose, every refill. Your siblings see what you gave
-                and when — no more "did anyone remember?" texts at 9pm.
+                Every med, every dose, every refill. Siblings see what you gave and when
+                — no more <em>"did anyone remember?"</em> texts at 9pm.
               </p>
+              <ul class="feature-bullets">
+                <li>Refill countdowns before you're out</li>
+                <li>Who-gave-what timeline</li>
+                <li>Missed-dose alerts to the family</li>
+              </ul>
+            </article>
+
+            <article class="feature-card feature-card-accent">
+              <div class="feature-icon feature-icon-terracotta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
+              </div>
+              <h3>The Side-Effect Detective</h3>
+              <p>
+                When new symptoms show up after a med change, Halmoni notices — and sorts
+                them by urgency: call the doctor today, mention next visit, or keep an eye.
+              </p>
+              <div class="feature-pill">✨ new</div>
             </article>
 
             <article class="feature-card">
-              <div class="feature-emoji">🩺</div>
-              <h3>Doctor visits that don't get lost</h3>
+              <div class="feature-icon feature-icon-sage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="12" cy="15" r="1.5"/></svg>
+              </div>
+              <h3>Visits that don't get lost</h3>
               <p>
                 Visit Mode captures diagnoses, new prescriptions, and follow-ups as they
-                happen. Everyone in the family sees the summary that night.
+                happen. The family sees the summary that night.
               </p>
             </article>
 
             <article class="feature-card">
-              <div class="feature-emoji">🔄</div>
+              <div class="feature-icon feature-icon-sage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0116-.5"/><path d="M20 4v6h-6"/><path d="M20 12a8 8 0 01-16 .5"/><path d="M4 20v-6h6"/></svg>
+              </div>
               <h3>Hand off the mental load</h3>
               <p>
-                Going out of town? Hand off to a sibling with a message. They accept — and
+                Going out of town? Hand off to a sibling with a note. They accept — and
                 now they're on-duty. You can actually take a break.
               </p>
             </article>
 
             <article class="feature-card">
-              <div class="feature-emoji">✨</div>
-              <h3>Spot side effects before they escalate</h3>
+              <div class="feature-icon feature-icon-terracotta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9l-6-6z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+              </div>
+              <h3>The Care Kit — doctor-ready</h3>
               <p>
-                A built-in detective watches for new symptoms after a med change and
-                sorts them — call the doctor today, mention at next visit, or keep an
-                eye on. So you catch it early, not in the ER.
+                One tap exports a printable PDF of meds, recent visits, and open questions.
+                Bring it to the appointment. Leave it with the ER nurse.
               </p>
+              <div class="feature-pill">📄 new</div>
             </article>
 
             <article class="feature-card">
-              <div class="feature-emoji">📓</div>
-              <h3>One timeline, one truth</h3>
-              <p>
-                Every dose, symptom, note, and visit lives in a single feed. Scroll it
-                before a doctor's appointment and walk in prepared.
-              </p>
-            </article>
-
-            <article class="feature-card">
-              <div class="feature-emoji">📄</div>
-              <h3>The Care Kit — one tap, doctor-ready</h3>
-              <p>
-                Export a printable PDF of your parent's meds, recent visits, and open
-                questions. Bring it to the appointment. Leave it with the ER nurse.
-                Hand it to the new specialist.
-              </p>
-            </article>
-
-            <article class="feature-card">
-              <div class="feature-emoji">🌿</div>
+              <div class="feature-icon feature-icon-sage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5z"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
               <h3>Private by design</h3>
               <p>
-                Your family's data belongs to your family. No ads. No data resale.
-                Your parent isn't a product.
+                Your family's data belongs to your family. No ads. No data resale. Your
+                parent is not a product.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="waitlist" class="waitlist">
+      <!-- ===== TESTIMONIAL / PULL QUOTE ===== -->
+      <section class="quote" data-reveal>
+        <div class="container">
+          <blockquote class="quote-body">
+            <span class="quote-mark" aria-hidden="true">"</span>
+            The first month, my sister and I stopped arguing about Mom's meds. We had a
+            single source of truth. It's the small thing that changed everything.
+          </blockquote>
+          <div class="quote-attr">
+            <div class="quote-avatar" style="background: #d28a66">A</div>
+            <div>
+              <div class="quote-name">Ana R.</div>
+              <div class="quote-role">daughter · beta family, Los Angeles</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section id="faq" class="faq" data-reveal>
+        <div class="container faq-container">
+          <div class="faq-header">
+            <span class="eyebrow">Frequently asked</span>
+            <h2>Questions we hear a lot.</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                <span>Is Halmoni free?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Yes — during private beta, Halmoni is free for every family on the
+                waitlist. When we launch publicly, plans start at a flat monthly rate per
+                family (not per sibling). Early-access families get founding pricing for
+                life.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>
+                <span>Who can see my parent's data?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Only the family members you invite. No advertisers. No data brokers. We
+                don't sell, share, or train models on your data — full stop.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>
+                <span>Does my mom need to install anything?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                No. Halmoni is for the adult children coordinating care — your parent
+                doesn't have to use it, install it, or even know it exists (though many
+                do, and love it).
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>
+                <span>How is this different from a shared note or spreadsheet?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Notes and sheets are passive — you still have to remember to check them.
+                Halmoni is active: refill countdowns, missed-dose alerts, side-effect
+                pattern detection, and hand-offs mean the app tells <em>you</em> what
+                needs attention, not the other way around.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>
+                <span>When is Halmoni launching?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Currently in private beta with a small group of families. Public launch on
+                the App Store is planned for later this year — join the waitlist to be
+                first in line.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== WAITLIST ===== -->
+      <section id="waitlist" class="waitlist" data-reveal>
         <div class="container">
           <div class="waitlist-card">
+            <div class="waitlist-glow" aria-hidden="true"></div>
             <span class="eyebrow">Coming soon to the App Store</span>
-            <h2>Be the first to know when Halmoni launches.</h2>
+            <h2>Be first when Halmoni launches.</h2>
             <p>
-              We're in private beta with a small group of families. Join the waitlist and
-              we'll email you the day it goes live — plus early-access pricing.
+              We're in private beta with a small group of families. Join the waitlist —
+              we'll email you the day it goes live, plus early-access pricing.
             </p>
             <form id="waitlist-form" class="waitlist-form" action="#" method="POST">
               <label class="visually-hidden" for="email">Email address</label>
@@ -256,9 +518,15 @@
                 required
                 autocomplete="email"
               />
-              <button type="submit" class="btn btn-primary">Join the waitlist</button>
+              <button type="submit" class="btn btn-primary">
+                Join the waitlist
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
             </form>
             <p id="waitlist-status" class="waitlist-status" role="status"></p>
+            <p class="waitlist-fine">
+              No spam. One email at launch. Unsubscribe anytime.
+            </p>
           </div>
         </div>
       </section>
@@ -266,13 +534,38 @@
 
     <footer class="footer">
       <div class="container footer-inner">
-        <div>
-          <span class="logo-emoji" aria-hidden="true">👵</span>
-          <span class="logo-word">Halmoni</span>
+        <div class="footer-brand">
+          <a class="logo" href="#top">
+            <span class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="15" fill="#7a9b8a" />
+                <path d="M10 20c1.5-3 3.5-4 6-4s4.5 1 6 4" stroke="#fefcf8" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                <circle cx="12.5" cy="13" r="1.4" fill="#fefcf8" />
+                <circle cx="19.5" cy="13" r="1.4" fill="#fefcf8" />
+              </svg>
+            </span>
+            <span class="logo-word">Halmoni</span>
+          </a>
+          <p class="footer-tag">Share the load of caring for a parent.</p>
         </div>
-        <div class="footer-meta">
-          Built by <a href="#" class="footer-link">Hana Choi</a> · halmoni.uk
+        <div class="footer-cols">
+          <div class="footer-col">
+            <div class="footer-col-title">Product</div>
+            <a href="#how">How it works</a>
+            <a href="#demo">Live demo</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Get started</div>
+            <a href="#waitlist">Join the waitlist</a>
+            <a href="mailto:hi@halmoni.uk">Say hello</a>
+          </div>
         </div>
+      </div>
+      <div class="container footer-bottom">
+        <div>© <span id="year"></span> Halmoni · Made with care by <a href="mailto:h.choi2024@gmail.com">Hana Choi</a></div>
+        <div class="footer-meta">halmoni.uk</div>
       </div>
     </footer>
 
