@@ -44,7 +44,7 @@
   --radius-pill: 999px;
 
   /* type */
-  --font-display: 'Fraunces', 'Times New Roman', Georgia, serif;
+  --font-display: 'Instrument Serif', 'Times New Roman', Georgia, serif;
   --font-sans:
     'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, sans-serif;
@@ -192,7 +192,6 @@ a:hover {
 .logo-word {
   font-family: var(--font-display);
   font-weight: 500;
-  font-variation-settings: 'opsz' 30;
   font-size: 22px;
   letter-spacing: -0.02em;
 }
@@ -378,7 +377,6 @@ a:hover {
 .hero-title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-variation-settings: 'opsz' 144;
   font-size: clamp(44px, 6.5vw, 82px);
   line-height: 0.98;
   letter-spacing: -0.035em;
@@ -690,7 +688,6 @@ a:hover {
 .stat-num {
   font-family: var(--font-display);
   font-weight: 400;
-  font-variation-settings: 'opsz' 144;
   font-size: clamp(36px, 4vw, 52px);
   line-height: 1;
   letter-spacing: -0.04em;
@@ -722,7 +719,6 @@ a:hover {
 .section-header h2 {
   font-family: var(--font-display);
   font-weight: 400;
-  font-variation-settings: 'opsz' 144;
   font-size: clamp(32px, 4.2vw, 52px);
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -752,7 +748,6 @@ a:hover {
 .problem-title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-variation-settings: 'opsz' 144;
   font-size: clamp(28px, 3.6vw, 44px);
   line-height: 1.15;
   letter-spacing: -0.025em;
@@ -1088,7 +1083,6 @@ a:hover {
   margin: 0 auto 32px;
   font-family: var(--font-display);
   font-weight: 400;
-  font-variation-settings: 'opsz' 144;
   font-size: clamp(26px, 3.4vw, 40px);
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -1258,7 +1252,6 @@ a:hover {
 .waitlist-card h2 {
   font-family: var(--font-display);
   font-weight: 400;
-  font-variation-settings: 'opsz' 144;
   font-size: clamp(32px, 4vw, 48px);
   margin: 0 0 16px;
   letter-spacing: -0.03em;
