@@ -4,5 +4,8 @@
   "framework": null,
   "buildCommand": null,
   "installCommand": null,
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/view/:id", "destination": "/view/index.html" }
+  ]
 }

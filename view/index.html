@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Halmoni Care Kit</title>
+  <link rel="icon" href="/favicon.svg" />
+  <style>
+    :root {
+      --cream: #faf6ee;
+      --ink: #2a2620;
+      --muted: #6b655c;
+      --sage: #6c8a6c;
+      --terracotta: #b95a3d;
+      --line: #e5ddd0;
+      --danger: #b03028;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--cream); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 32px 20px 80px; }
+    h1, h2 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; }
+    h1 { font-size: 40px; margin: 0 0 4px; }
+    h2 { font-size: 24px; margin: 32px 0 12px; }
+    .subtitle { color: var(--muted); margin: 0 0 32px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
+    label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; }
+    input[type="password"] { width: 100%; padding: 14px 16px; font-size: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--cream); color: var(--ink); }
+    button { background: var(--sage); color: white; border: 0; padding: 14px 20px; font-size: 16px; font-weight: 600; border-radius: 10px; cursor: pointer; margin-top: 12px; width: 100%; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .error { color: var(--danger); font-size: 14px; margin-top: 12px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .tag { display: inline-block; background: var(--cream); border: 1px solid var(--line); padding: 4px 10px; border-radius: 999px; font-size: 13px; margin: 2px; }
+    .tag.danger { background: #fdecea; border-color: #f4c7c1; color: var(--danger); font-weight: 600; }
+    .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); }
+    .row:last-child { border-bottom: 0; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+    .footer { color: var(--muted); font-size: 12px; margin-top: 48px; text-align: center; }
+    .hidden { display: none; }
+    .banner { background: #fff8e6; border: 1px solid #f0dfa4; padding: 12px 16px; border-radius: 10px; font-size: 14px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Halmoni Care Kit</h1>
+    <p class="subtitle">Passphrase-protected — decrypted in your browser, never on our servers.</p>
+
+    <div id="stage-passphrase" class="card">
+      <label for="passphrase">Passphrase</label>
+      <input id="passphrase" type="password" autocomplete="off" placeholder="Enter the passphrase you were given" />
+      <button id="decrypt">Unlock</button>
+      <div id="error" class="error hidden"></div>
+    </div>
+
+    <div id="stage-content" class="hidden"></div>
+
+    <div class="footer">
+      <div>Zero-knowledge share via halmoni.uk</div>
+    </div>
+  </main>
+
+  <script src="/view/config.js" onerror="window.__CONFIG_MISSING=true"></script>
+  <script src="/view/decrypt.js"></script>
+</body>
+</html>
