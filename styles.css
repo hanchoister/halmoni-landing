@@ -1317,6 +1317,15 @@ em { font-style: italic; }
 @media (min-width: 720px) {
   .footer-meta { text-align: right; }
 }
+/* Legal links sit on the dark footer, so they need their own contrast. */
+.footer-meta a {
+  color: rgba(254, 252, 248, 0.72);
+  text-decoration: none;
+}
+.footer-meta a:hover {
+  color: var(--cream-100);
+  text-decoration: underline;
+}
 
 /* ============ UNSTYLED-BLOCK BACKFILL ============ */
 /* These classes were referenced in index.html by the redesign but never got
