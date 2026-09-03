@@ -96,7 +96,9 @@ em { font-style: italic; }
   color: var(--ink-900);
   flex-shrink: 0;
 }
-.logo-mark svg { width: 32px; height: 32px; border-radius: 8px; }
+.logo-mark svg { width: 32px; height: 32px; }
+/* The header mark carries the brand on its own now that the tile is gone. */
+.nav .logo-mark svg { width: 44px; height: 44px; }
 .nav-links {
   display: none;
   gap: 28px;
