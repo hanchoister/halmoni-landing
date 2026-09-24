@@ -604,11 +604,14 @@
               we'll email you the day it goes live, plus early-access pricing.
             </p>
             <!--
-              The endpoint is the ONE thing to change here. Replace
-              mnjkgrev with the id from formspree.io (the tail of
-              https://formspree.io/f/xxxxxxxx). Until it is replaced the form
-              refuses to pretend it worked — see the handler below. It used to
-              do exactly that, and every address typed into it was lost (G0-13).
+              Posts to Formspree, which privacy.html has named all along. The
+              handler below only reports success if the POST actually succeeded:
+              the old version printed a thank-you unconditionally and threw
+              every address away (G0-13).
+
+              Formspree's free plan keeps submissions in the dashboard for 30
+              days only, so the durable record is the notification email, not
+              the dashboard. Keep email notifications ON.
             -->
             <form
               id="waitlist-form"
