@@ -603,7 +603,18 @@
               We're in private testing with a small group of families. Join the waitlist —
               we'll email you the day it goes live, plus early-access pricing.
             </p>
-            <form id="waitlist-form" class="waitlist-form" action="#" method="POST">
+            <!--
+              The endpoint is the ONE thing to change here. Replace
+              mnjkgrev with the id from formspree.io (the tail of
+              https://formspree.io/f/xxxxxxxx). Until it is replaced the form
+              refuses to pretend it worked — see the handler below. It used to
+              do exactly that, and every address typed into it was lost (G0-13).
+            -->
+            <form
+              id="waitlist-form"
+              class="waitlist-form"
+              action="https://formspree.io/f/mnjkgrev"
+              method="POST">
               <label class="visually-hidden" for="email">Email address</label>
               <input
                 type="email"
@@ -675,9 +686,36 @@
       if (wf) {
         wf.addEventListener('submit', function (e) {
           e.preventDefault();
-          var s = document.getElementById('waitlist-status');
-          if (s) s.textContent = "Thanks — we'll be in touch when we launch.";
-          wf.reset();
+          var status = document.getElementById('waitlist-status');
+          var btn = wf.querySelector('button[type="submit"]');
+          var say = function (msg) { if (status) status.textContent = msg; };
+
+          // This form previously called preventDefault(), said "Thanks — we'll
+          // be in touch", and threw the address away. Never again: if the
+          // endpoint has not been configured, say so instead of lying.
+          if (wf.action.indexOf('formspree.io/f/') === -1) {
+            say('Sign-ups are not connected yet — please email hello@halmoni.app instead.');
+            return;
+          }
+
+          if (btn) { btn.disabled = true; }
+          say('Adding you…');
+
+          fetch(wf.action, {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: new FormData(wf)
+          })
+            .then(function (res) {
+              if (!res.ok) { throw new Error('HTTP ' + res.status); }
+              say("You're on the list — we'll be in touch when we launch.");
+              wf.reset();
+            })
+            .catch(function () {
+              // An honest failure, so nobody walks away thinking they signed up.
+              say('That did not go through. Please email hello@halmoni.app and we will add you.');
+            })
+            .finally(function () { if (btn) { btn.disabled = false; } });
         });
       }
     </script>
