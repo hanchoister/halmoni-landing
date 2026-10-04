@@ -76,3 +76,31 @@ if (form) {
     }
   });
 }
+
+// ---------- demo phone: tint the status bar to match the app screen ----------
+const demoFrame = document.querySelector('.phone-demo iframe');
+const statusBar = document.querySelector('.phone-statusbar');
+if (demoFrame && statusBar) {
+  const topColor = () => {
+    const doc = demoFrame.contentDocument;
+    if (!doc) return null;
+    let el = doc.elementFromPoint(demoFrame.clientWidth / 2, 1);
+    while (el) {
+      const bg = getComputedStyle(el).backgroundColor;
+      if (bg && bg !== 'transparent' && !bg.endsWith(', 0)')) return bg;
+      el = el.parentElement;
+    }
+    return null;
+  };
+  const sync = () => {
+    const bg = topColor();
+    if (!bg || bg === statusBar.style.backgroundColor) return;
+    const [r, g, b] = bg.match(/\d+/g).map(Number);
+    statusBar.style.backgroundColor = bg;
+    statusBar.style.color = 0.299 * r + 0.587 * g + 0.114 * b < 140 ? '#fff' : '';
+  };
+  demoFrame.addEventListener('load', () => {
+    sync();
+    setInterval(sync, 400);
+  });
+}

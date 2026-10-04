@@ -1118,9 +1118,31 @@ em { font-style: italic; }
   width: 340px;
   height: 700px;
 }
+/* The demo is the real app's web export, which has no safe-area inset, so
+   without this bar the island sits on top of the app's header. main.js tints
+   it to match whichever screen is showing. */
+.phone-demo .phone-screen {
+  display: flex;
+  flex-direction: column;
+}
+.phone-statusbar {
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 26px 0 30px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-900);
+  background: var(--cream-50);
+  transition: background-color 0.2s, color 0.2s;
+}
 .phone-demo .phone-screen iframe {
   width: 100%;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   border: none;
   display: block;
 }
